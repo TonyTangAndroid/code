@@ -1,3 +1,5 @@
+apply plugin: 'org.neotech.plugin.rootcoverage'
+
 buildscript {
   repositories {
     jcenter()
@@ -5,7 +7,7 @@ buildscript {
   }
   dependencies {
     classpath 'com.android.tools.build:gradle:3.5.3'
-    classpath 'com.dicedmelon.gradle:jacoco-android:0.1.4'
+    classpath 'org.neotech.plugin:android-root-coverage-plugin:1.2.1'
   }
 }
 
@@ -13,21 +15,40 @@ ext {
   configCompileSdkVersion = 29
   configTargetSdkVersion = 29
   configBuildToolsVersion = '29.0.2'
+  appVersion = '0.1.0'
 
-  support = [appCompat  : 'androidx.appcompat:appcompat:1.0.0']
+  support = [appCompat: 'androidx.appcompat:appcompat:1.0.0']
 
   assertJCore = 'org.assertj:assertj-core:1.7.1'
-  junit = 'junit:junit:4.12'
+  junit = 'junit:junit:4.13'
 
   supportTest = [espressoCore: 'androidx.test.espresso:espresso-core:3.1.0',
                  rules       : 'androidx.test:rules:1.1.1']
 }
+
+
+rootCoverage {
+
+  // Since 1.2: When false the plugin does not execute any tests, useful when you run the tests manually or remote (Firebase Test Lab)
+  executeTests true
+
+  // Since 1.2: Same as executeTests except that this only affects the instrumented Android tests
+  executeAndroidTests true
+
+  // Since 1.2: Same as executeTests except that this only affects the unit tests
+  executeUnitTests true
+
+  // Since 1.2: When true include results from instrumented Android tests into the coverage report
+  includeAndroidTestResults true
+
+  // Since 1.2: When true include results from unit tests into the coverage report
+  includeUnitTestResults true
+}
+
 
 allprojects {
   repositories {
     jcenter()
     google()
   }
-
-  project.version = '0.1.0'
 }

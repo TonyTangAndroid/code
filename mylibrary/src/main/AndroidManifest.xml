@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dicedmelon.example.android.library"
+    >
+
+  <application android:fullBackupContent="false">
+    <activity android:name="com.tonytangandroid.motif.assist.mylibrary.LoginActivity" />
+    <activity android:name="com.tonytangandroid.motif.assist.mylibrary.WelcomeActivity" />
+
+  </application>
+</manifest>
