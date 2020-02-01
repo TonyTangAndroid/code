@@ -1,3 +1,6 @@
+apply plugin: 'org.neotech.plugin.rootcoverage'
+
+
 buildscript {
   repositories {
     jcenter()
@@ -5,7 +8,7 @@ buildscript {
   }
   dependencies {
     classpath 'com.android.tools.build:gradle:3.5.3'
-    classpath 'com.dicedmelon.gradle:jacoco-android:0.1.4'
+    classpath 'org.neotech.plugin:android-root-coverage-plugin:1.2.1'
   }
 }
 
