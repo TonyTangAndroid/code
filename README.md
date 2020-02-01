@@ -1,6 +1,6 @@
 
-[![Build Status](https://travis-ci.org/TonyTangAndroid/codeCovAndroidExample.svg?branch=master)](https://travis-ci.org/TonyTangAndroid/codeCovAndroidExample)
-[![codecov.io](https://codecov.io/github/TonyTangAndroid/codeCovAndroidExample/branch/master/graph/badge.svg)](https://codecov.io/github/TonyTangAndroid/codeCovAndroidExample)
+[![Build Status](https://travis-ci.org/TonyTangAndroid/code.svg?branch=master)](https://travis-ci.org/TonyTangAndroid/code)
+[![codecov.io](https://codecov.io/github/TonyTangAndroid/code/branch/master/graph/badge.svg)](https://codecov.io/github/TonyTangAndroid/code)
 # [Codecov](https://codecov.io) Android Example
 ## Guide
 #### Travis Setup
