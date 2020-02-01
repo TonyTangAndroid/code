@@ -10,14 +10,15 @@ buildscript {
 }
 
 ext {
-  configCompileSdkVersion = 29
-  configTargetSdkVersion = 29
-  configBuildToolsVersion = '29.0.2'
+  configCompileSdkVersion = 28
+  configTargetSdkVersion = 28
+  configBuildToolsVersion = '28.0.3'
+  appVersion = '0.1.0'
 
-  support = [appCompat  : 'androidx.appcompat:appcompat:1.0.0']
+  support = [appCompat: 'androidx.appcompat:appcompat:1.0.0']
 
   assertJCore = 'org.assertj:assertj-core:1.7.1'
-  junit = 'junit:junit:4.12'
+  junit = 'junit:junit:4.13'
 
   supportTest = [espressoCore: 'androidx.test.espresso:espresso-core:3.1.0',
                  rules       : 'androidx.test:rules:1.1.1']
@@ -28,6 +29,4 @@ allprojects {
     jcenter()
     google()
   }
-
-  project.version = '0.1.0'
 }

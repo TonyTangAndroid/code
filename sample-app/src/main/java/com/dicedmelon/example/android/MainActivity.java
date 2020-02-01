@@ -1,9 +1,11 @@
 package com.dicedmelon.example.android;
 
-import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import com.dicedmelon.example.android.databinding.ActivityMainBinding;
+import com.tonytangandroid.motif.assist.mylibrary.AndroidCode;
+import com.tonytangandroid.motif.assist.mylibrary.AppTestCode;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,5 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     NumberProvider numberProvider = new NumberProvider();
     viewDataBinding.setNumber(numberProvider.provideNumber());
+
+    System.out.println(AppTestCode.message());
   }
 }
