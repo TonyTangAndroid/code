@@ -6,11 +6,11 @@ android {
   buildToolsVersion configBuildToolsVersion
 
   defaultConfig {
-    minSdkVersion 15
+    minSdkVersion 22
     applicationId 'com.dicedmelon.example.android'
     targetSdkVersion configTargetSdkVersion
     versionCode 1
-    versionName project.version
+    versionName appVersion
     testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
   }
 
@@ -30,9 +30,14 @@ android {
 dependencies {
   compile support.appCompat
 
-  testCompile assertJCore
-  testCompile junit
+  testImplementation assertJCore
+  testImplementation junit
+  testImplementation 'com.google.truth:truth:1.0.1'
 
-  androidTestCompile supportTest.espressoCore
-  androidTestCompile supportTest.rules
+
+  androidTestImplementation supportTest.espressoCore
+  androidTestImplementation supportTest.rules
+
+  androidTestImplementation 'com.google.truth:truth:1.0.1'
+  implementation project(path: ':mylibrary')
 }
